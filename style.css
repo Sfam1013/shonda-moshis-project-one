@@ -8,13 +8,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-    font-family: 'Catamaran', sans-serif;
-
-    font-family: 'Kanit', sans-serif;
-
-    font-family: 'Lato', sans-serif;
-
-    font-family: 'Roboto', sans-serif;
 
 img{
     width:100%;
@@ -39,6 +32,7 @@ h1{
     letter-spacing: 1px;
     text-transform: uppercase;
     margin:0;
+    font-weight: 500;
 }
 .logo{
     color:white;
@@ -49,16 +43,6 @@ h1{
     margin:0;
     padding-top: 20px;
 }
-.top-header a{
-    list-style-type: none;
-    text-decoration: none;
-    color: white;
-    font-family: 'Catamaran', sans-serif;
-    font-size: 18px;
-    line-height: 29px;
-    padding:20px;
-
-}
 h4{
     color:white;
     font-family: 'Lato', sans-serif;
@@ -67,31 +51,43 @@ h4{
     letter-spacing: 0.3px;
     margin:0;
 }
+.desktop a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 18px;
+    padding:20px;
+}
+.desktop ul{
+    float:right;
+}
 .title{
     position: absolute;
     top:300px;
 }
-.top-header ul{
-    position: absolute;
-    top: 0;
-    right: 106px;
+.hamburger-icon i{
+    color:white;
+    font-size: 40px;
+    float:right;
 }
-.top-header a{
-    padding:20px;
+.hamburger-icon a
+{
+    display: none;
+}
+.drop-down ul a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 18px; 
 }
 .drop-down{
-    color:white;
     float: right;
-    font-size: 50px;
-    visibility: hidden;
-}
-.drop-down a{
     width: 10%;
-    top: 102px;
+    text-align: end;
     line-height: 5;
-}
-.drop-down:focus{
-    visibility: visible;
+    display:none;
 }
 .media-icons i{
     color: white;
@@ -102,7 +98,7 @@ h4{
 .media-icons{
     position:absolute;
     right:0;
-    bottom:25px;
+    bottom:-200px;
 }
 .part-2-pics img{
     width:calc(33% - 40px);
@@ -110,7 +106,7 @@ h4{
     margin-right:20px;
 }
 h2{
-     font-family:'kanit', sans-serif;
+    font-family:'kanit', sans-serif;
     font-size: 42px;
     line-height: 43px;
     text-transform: uppercase;  
@@ -149,6 +145,9 @@ h2{
     width:45%;
     padding:5%;
 }
+.part-4-left h2{
+    width:65%;
+}
 .part-5 img{
     float:left;
     width:50%;
@@ -157,6 +156,7 @@ p{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     line-height:29px;
+    font-weight: lighter;
 }
 button{
     font-family: 'Kanit', sans-serif;
@@ -244,7 +244,130 @@ footer h4{
     text-align: right;
 }
 @media(max-width:745px){
-    .bottom-links{
-        width:19%;
+    .bottom-links ul{
+        width:15%;
     }
+    
+}
+@media(max-width:570px){
+    .bottom-links ul{
+        width:18%
+    }
+}
+@media(max-width:494px){
+    .subscribe{
+      float:none;
+      text-align: center;
+      width: 100%;  
+    }
+    .subscribe button{
+        width:75%;
+    }
+    input{
+        text-align: center;
+    }
+    footer p{
+        font-size: 100%;
+    }
+    .bottom-links a{
+        font-family: 'Kanit', sans-serif;
+        font-size: 25px;
+    }
+    .contact{
+        width:40%;
+        padding-top:24px;
+    }
+    .bottom-links ul{
+        width:35%;
+    }
+    .bottom-links a{
+        padding-top: 5px;
+    }
+    .icon-1, .icon-2, .icon-3{
+        width:100%;
+        float:none;
+    }
+    .part-5 img{
+        width:100%;
+    }
+    .part-5-right{
+        width:90%;
+        text-align: center;
+        float:none;
+    }
+    .part-5 h2{
+       font-size:38px ; 
+       display:inline-block;
+       margin-top:20px;
+    }
+    .part-4  img{
+        float:none;
+        width: 100%;
+    }
+    .part-4-left{
+        float:none;
+        width:100%;
+        text-align: center;
+    }
+    .part-4-left h2{
+        font-size:38px;
+        width: 100%;
+    }
+    .part-3 img{
+        float:none;
+        width:100%;
+    }
+    .part-3 div{
+        width:95%;
+        text-align: center;
+    }
+    .part-3 h2{
+        font-size: 35px;
+        width: 100%;
+    }
+    .pic-3{
+        display:none;
+    }
+    .part-2-pics img{
+        width:48%;
+        float:none;
+        margin-right: 0;
+    }
+    .pic-2{
+       margin-left: 10px;       
+    }
+    .fab{
+        display: none;
+    }
+    .desktop{
+        display:none;
+    }
+    .logo{
+        display:none;
+    }
+    .title h1{
+        font-size: 65px;
+        line-height: 60px;
+        font-weight: bolder;
+    }
+    .title h4{
+        font-size: 16px;
+    }
+    header{
+        height:600px;
+    }
+    .hamburger-icon i{
+        display: block;
+    }
+    .hamburger-icon a:hover ~ .drop-down{
+        display: block;
+    }
+}
+@media(max-width:380px){
+    header{
+        height:550px;
+    }
+    .pic-2{
+        margin-left: 0;
+    } 
 }
